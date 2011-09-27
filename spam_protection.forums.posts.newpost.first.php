@@ -39,16 +39,7 @@ if($spam_service!='none' && $cfg['plugin']['spam_protection']['filter_forums']==
 			$fs_masterid = 0;
 			$fs_countposts = 0;
 		}
-	
-		if($cfg['parser_cache'])
-		{
-			$rhtml = sed_sql_prep(sed_parse(htmlspecialchars($newmsg), $cfg['parsebbcodeforums'] && $fs_allowbbcodes, $cfg['parsesmiliesforums'] && $fs_allowsmilies, 1));
-		}
-		else
-		{
-			$rhtml = '';
-		}	
-		
+
 		$spam_data = array(
 			'fp_topicid' => (int)$q,
 			'fp_sectionid' => (int)$s,
@@ -58,7 +49,6 @@ if($spam_service!='none' && $cfg['plugin']['spam_protection']['filter_forums']==
 			'fp_updated' => (int)$sys['now_offset'],
 			'fp_updater' => 0,
 			'fp_text' => $newmsg,
-			'fp_html' => $rhtml,
 			'fp_posterip' => $usr['ip'],
 			'fs_masterid' => $fs_masterid,
 			'fs_countposts' => $fs_countposts
