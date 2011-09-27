@@ -1,0 +1,36 @@
+
+ul.sp_list,li.sp_list {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+ul.sp_list {
+	clear: both;
+	overflow: hidden;
+}
+.sp_left {
+	float: left;
+}
+.sp_right {
+	float: right;
+}
+hr.sp_hr {
+	height: 1px;
+	width: 100%;
+}
+.with_selected_button {
+	padding: 5px;
+}
+.sp_selectclick {
+	cursor: pointer;
+}
+.sp_checkbox {
+	cursor: pointer;
+}
+#sp_action_with_selected {
+	font-size: 14px;
+}
+
+.sp_mouseover {
+	cursor: pointer; 	
+}
